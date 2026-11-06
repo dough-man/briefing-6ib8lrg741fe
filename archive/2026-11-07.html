@@ -23,8 +23,9 @@ h2{font-size:16px;margin:26px 2px 10px}
 .commute{font-size:13px;color:var(--sub);margin-top:6px}
 .strip{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;margin-top:14px;overflow-x:auto}
 .day{background:var(--card);border-radius:12px;padding:8px 2px;text-align:center;min-width:44px;display:flex;flex-direction:column;gap:2px}
-.day .dow{font-size:12px;color:var(--sub)}.day .ico{font-size:20px}.day .t{font-size:12px}.day .t b{font-size:13px}
+.day .dow{font-size:12px;color:var(--sub)}.day .md{font-size:11px;color:var(--sub)}.day .ico{font-size:20px}.day .t{font-size:12px}.day .t b{font-size:13px}
 .day .w{font-size:11px;min-height:16px}.day i{font-style:normal}
+.weekend{background:var(--card);border-radius:14px;padding:12px 14px;margin-top:12px;box-shadow:var(--shadow)}.weekend b{font-size:14px}.weekend p{margin:4px 0 0;font-size:14px}
 .weekline{font-size:13px;color:var(--sub);margin:12px 0 0}
 .grid{display:grid;gap:12px}@media(min-width:620px){.grid{grid-template-columns:1fr 1fr}}
 .card{background:var(--card);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;color:inherit;text-decoration:none;display:block}
@@ -55,42 +56,52 @@ footer.foot{margin-top:30px;text-align:center;font-size:12px;color:var(--sub)}
 <header><div class="date">2026.11.7 (토)</div><h1>☕ 오늘의 아침 브리핑</h1></header>
 
 <section class="hero">
-  <div class="hero-text"><p>🧣 맑지만 쌀쌀 · -1~6° · 출근길 체감 -5°</p><p>목도리·장갑에 두툼한 겉옷 필수, 미끄럼 조심. 햇살 좋은 토요일 아침이에요.</p></div>
+  <div class="hero-text"><p>❄️ 맑지만 영하권 · -1~6° · 체감 -5°</p><p>출근길 두툼한 겉옷과 장갑 필수, 빙판 조심. 따뜻한 빵 냄새가 더 반가운 아침.</p></div>
   <div class="chips"><div class="chip"><b>관악구</b> 🌤️ -1° / 6° · ☔ 0% · 💨 8m/s</div><div class="chip"><b>서초구</b> 🌤️ -1° / 7° · ☔ 0% · 💨 8m/s</div></div>
   <div class="commute">🚇 출근 -1°(체감 -5°) · 퇴근 5°(체감 1°)</div>
-  <div class="strip"><div class="day"><span class="dow">토</span><span class="ico">🌤️</span><span class="t"><b>6°</b> -1°</span><span class="w"><i title="영하">🥶</i></span></div><div class="day"><span class="dow">일</span><span class="ico">🌦️</span><span class="t"><b>8°</b> 2°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">월</span><span class="ico">🌦️</span><span class="t"><b>10°</b> 2°</span><span class="w"><i title="비">☔</i></span></div><div class="day"><span class="dow">화</span><span class="ico">🌤️</span><span class="t"><b>10°</b> 0°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">수</span><span class="ico">🌤️</span><span class="t"><b>14°</b> 4°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">목</span><span class="ico">☁️</span><span class="t"><b>15°</b> 5°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">금</span><span class="ico">☁️</span><span class="t"><b>15°</b> 7°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">토</span><span class="ico">🌦️</span><span class="t"><b>16°</b> 6°</span><span class="w">&nbsp;</span></div></div>
-  <p class="weekline">토(7일) 맑음, 영하권 출발 -1~6°<br>일(8일) 이슬비 가능(확률 41%), 월(9일) 약한 비 2mm 안팎<br>화(10일) 맑음, 아침 0°대 / 수~목(11~12일) 최고 14~15°로 일교차 큼<br>토(14일) 이슬비 가능(확률 24%), 기온은 16° 안팎</p>
+  <div class="strip"><div class="day"><span class="dow">토</span><span class="md">11/7</span><span class="ico">🌤️</span><span class="t"><b>6°</b> -1°</span><span class="w"><i title="영하">🥶</i></span></div><div class="day"><span class="dow">일</span><span class="md">11/8</span><span class="ico">🌦️</span><span class="t"><b>8°</b> 2°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">월</span><span class="md">11/9</span><span class="ico">🌦️</span><span class="t"><b>10°</b> 2°</span><span class="w"><i title="비">☔</i></span></div><div class="day"><span class="dow">화</span><span class="md">11/10</span><span class="ico">🌤️</span><span class="t"><b>10°</b> 0°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">수</span><span class="md">11/11</span><span class="ico">🌤️</span><span class="t"><b>14°</b> 4°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">목</span><span class="md">11/12</span><span class="ico">☁️</span><span class="t"><b>15°</b> 5°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">금</span><span class="md">11/13</span><span class="ico">☁️</span><span class="t"><b>15°</b> 7°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">토</span><span class="md">11/14</span><span class="ico">🌦️</span><span class="t"><b>16°</b> 6°</span><span class="w">&nbsp;</span></div></div>
+  <p class="weekline">오늘 11/7(토) 대체로 맑음 · -1~6° · 영하 출발, 바람 쌀쌀<br>내일 11/8(일) 약한 이슬비 · 2~8° · 강수확률 41%<br>모레 11/9(월) 약한 이슬비 · 2~10° · 우산 챙기기</p>
+  <div class="weekend"><b>🏕️ 이번 주말은?</b><p>11/7(토) ☀️ -1~6° · 11/8(일) 🌧️ 2~8° 이슬비<br>토요일은 맑지만 추우니 따뜻하게 입고 짧은 산책이나 카페 투어, 일요일은 비 소식이라 집콕 베이킹이나 전시·영화 같은 실내 활동이 어울려요.</p></div>
 </section>
 <section><h2>📰 업계 뉴스</h2><div class="grid">
-<a class="card news" href="https://www.hankyung.com/article/202611045655g" target="_blank" rel="noopener noreferrer">
-  <div class="thumb" style="background-image:url('https://img.hankyung.com/photo/202611/01.46307542.1.jpg')"></div>
+<a class="card news" href="https://www.insight.co.kr/news/580587" target="_blank" rel="noopener noreferrer">
+  <div class="thumb" style="background-image:url('https://img.insight.co.kr/static/2026/11/04/1200/img_20261104103421_y0x5ghps.jpg')"></div>
   <div class="body">
-    <span class="tag" style="--c:#0891b2">🤝 고객사</span><span class="when">11/4 기사</span>
-    <h3>백미당, 대한항공 비즈니스석 디저트 공급 시작</h3>
-    <p>남양유업 백미당이 11월 1일부터 대한항공 중장거리 프레스티지석에 아이스크림 2종을 공급, 기존 하겐다즈 자리를 대체. 기내 디저트도 국내 브랜드로 바뀌는 흐름이라 항공 B2B 제안 시 참고할 사례.</p>
+    <span class="tag" style="--c:#d97706">🥐 경쟁사</span><span class="when">11/4 기사</span>
+    <h3>후속 파바, 초코 디저트 30종으로 겨울 공략</h3>
+    <p>파리바게뜨가 누적 500만 개 팔린 &#x27;초코 쫀득 츄러스&#x27;를 길이·코팅을 키워 개선하고 초코 디저트 30종 캠페인을 11/30까지 진행. 단일 히트 제품을 시즌 라인업으로 확장하는 방식이라 B2B 시즌 기획에도 참고할 만함.</p>
     <span class="more">기사 보기 →</span>
   </div>
 </a>
-<a class="card news" href="https://biz.heraldcorp.com/article/10924218" target="_blank" rel="noopener noreferrer">
-  <div class="thumb" style="background-image:url('https://wimg.heraldcorp.com/news/cms/2026/11/03/news-p.v1.20261103.0e5fcd6cb0424bdfbb66b4ab0de9c919_P1.jpg')"></div>
+<a class="card news" href="https://www.shinsegaegroupnewsroom.com/starbucks-launches-4-types-of-whole-cakes-ahead-of-year-end-season-2/" target="_blank" rel="noopener noreferrer">
+  <div class="thumb" style="background-image:url('https://images.shinsegaegroupnewsroom.com/wp-content/uploads/2026/11/20261101-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%82%AC%EC%A7%84%EC%9E%90%EB%A3%8C_%ED%99%80%EC%BC%80%EC%9D%B4%ED%81%AC-4%EC%A2%85.jpg')"></div>
   <div class="body">
-    <span class="tag" style="--c:#7c3aed">✨ 트렌드</span><span class="when">11/3 기사</span>
-    <h3>삼립, &#x27;호빵맨&#x27; 콜라보 베이커리 4종 출시</h3>
-    <p>삼립이 호빵맨 캐릭터 베이커리 4종을 내놓고 띠부씰 100종을 동봉. 11월 중 신제품을 추가할 계획. 수집형 굿즈 결합이 계속 통한다는 신호라 단체·테마파크용 캐릭터 상품 기획에 참고할 만함.</p>
+    <span class="tag" style="--c:#7c3aed">✨ 트렌드</span><span class="when">11/2 기사</span>
+    <h3>스타벅스, 연말 홀케이크 4종 출시</h3>
+    <p>모찌 바스크 치즈, 보늬밤 몽블랑 치즈, 얼그레이 카라멜 넛츠, 티라미수 크레이프 4종. 치즈·밤·모찌 등 식감과 가을·겨울 풍미가 연말 케이크 키워드. 선물·단체용 케이크 기획에 참고.</p>
     <span class="more">기사 보기 →</span>
   </div>
 </a>
-<a class="card news" href="https://www.g-enews.com/article/Industry/2026/11/20261105090130451ea14faf6f5_1" target="_blank" rel="noopener noreferrer">
-  <div class="thumb" style="background-image:url('https://nimage.g-enews.com/phpwas/restmb_allidxmake.php?idx=5&amp;simg=2026110509022709590ea14faf6f5175197343.jpg')"></div>
+<a class="card news" href="https://www.stardailynews.co.kr/news/articleView.html?idxno=601006" target="_blank" rel="noopener noreferrer">
+  <div class="thumb" style="background-image:url('https://cdn.stardailynews.co.kr/news/photo/202610/601006_601079_3730.jpg')"></div>
   <div class="body">
-    <span class="tag" style="--c:#0891b2">🤝 고객사</span><span class="when">11/5 기사</span>
-    <h3>대한항공, USA투데이 어워즈 기내식 등 3관왕</h3>
-    <p>대한항공이 USA투데이 독자선택상에서 기내식·승무원·프리미엄석 부문 1위. 한식 재해석 메뉴와 사전주문 서비스가 강점으로 언급. 12월 아시아나 합병을 앞두고 서비스 기준 유지가 과제라 기내식 기획 눈높이도 유지될 전망.</p>
+    <span class="tag" style="--c:#7c3aed">✨ 트렌드</span><span class="when">11/2 기사</span>
+    <h3>그릭요거트 &#x27;요즘&#x27;, 베이커리 확장 신제품 6종</h3>
+    <p>세븐일레븐 협업으로 모찌롤·마카롱을 내놓은 데 이어 11월 애플시나몬 모찌롤·딸기 크림빵, 12월 글루텐프리·저당·고단백 식사빵 출시 예정. 건강 콘셉트가 베이커리로 번지는 흐름이라 기능성 제품 기획에 참고.</p>
+    <span class="more">기사 보기 →</span>
+  </div>
+</a>
+<a class="card news" href="https://www.koreapost.co.kr/news/articleView.html?idxno=89959" target="_blank" rel="noopener noreferrer">
+  <div class="thumb" style="background-image:url('https://cdn.koreapost.co.kr/news/photo/202611/89959_95518_49.jpg')"></div>
+  <div class="body">
+    <span class="tag" style="--c:#2563eb">📊 시장</span><span class="when">11/6 기사</span>
+    <h3>식품업계, 저당·고단백 간식 경쟁 가속</h3>
+    <p>오리온·올가홀푸드·롯데칠성 등이 당은 줄이고 단백질·식이섬유를 강화한 신제품을 내놓음. 삼립 등은 디저트 풍미로 차별화. 소비 목적별 시장 세분화가 뚜렷해 B2B 제안에도 영양 포인트 정리가 필요.</p>
     <span class="more">기사 보기 →</span>
   </div>
 </a></div></section>
-<section><h2>📈 오늘의 경제</h2><div class="inds"><div class="ind"><span>코스피</span><b>5,059.69</b><em class="down">-6.02%</em></div><div class="ind"><span>나스닥</span><b>24,315.00</b><em class="down">-5.52%</em></div><div class="ind"><span>S&amp;P500</span><b>7,353.73</b><em class="down">-4.36%</em></div><div class="ind"><span>원/달러</span><b>1,356.6원</b><em class="up">+14.5원</em></div></div><p class="mnote">🗞️ 계좌도 출근길 기분도 파랗게 질린 날. 오늘은 숫자보다 점심 메뉴로 마음을 달래요.</p><div class="grid"><div class="card eco"><h3>코스피 6% 급락, 장중 5,000선 무너져</h3><p>6일 코스피가 6.02% 내린 5,059.69에 마감. 외국인이 2조 7천억원대를 순매도하며 반도체가 크게 밀렸다.</p><p class="view">💭 <b>생각해볼 관점</b> 월급날 전에 계좌가 흔들리면 마음도 흔들려요. 큰 하락일엔 숫자보다 내 투자 기간을 먼저 떠올려보자.</p><a class="emore" href="https://www.newspim.com/news/view/20261106000997" target="_blank" rel="noopener noreferrer">근거 기사 →</a></div><div class="card eco"><h3>뉴욕 증시 급락, 나스닥 5.5% 하락</h3><p>5일 나스닥이 5.52% 내린 24,315.00으로 마감. 중간선거 뒤 AI 데이터센터 규제 우려와 퀄컴 실적 부진이 겹쳤다.</p><p class="view">💭 <b>생각해볼 관점</b> 기업은 대부분 오늘도 빵을 팔지만 주가는 기분을 탄다. 환율·원가 영향은 어떨지 함께 살펴보자.</p><a class="emore" href="https://www.topstarnews.net/news/articleView.html?idxno=16269494" target="_blank" rel="noopener noreferrer">근거 기사 →</a></div></div><div class="card tip"><span class="etag">💡 오늘의 머니 팁 · 용어</span><h3>환율이 오른다는 건 무슨 뜻일까</h3><p>환율은 1달러를 사는 데 필요한 원화 금액이에요. 어제 1,356.6원으로 14.5원 올랐는데, 원화 가치가 그만큼 내렸다는 뜻이에요. 해외 직구·여행 비용과 수입 원재료 값에 영향을 줄 수 있어요.</p><p class="note">※ 참고용 정보이며 특정 상품 추천이 아닙니다. 가입 조건은 공식 안내를 확인하세요.</p></div></section>
-<section><h2>🔎 오늘 주목받는 종목</h2><div class="grid"><div class="card stock"><div class="sh"><span class="flag">🇰🇷</span><b>SK하이닉스(000660)</b><em class="down">-10.44%</em></div><p>미국 AI 데이터센터 규제 우려로 반도체주가 급락한 가운데 113만 2천원에 마감. 외국인이 약 1조 9천억원 순매도.</p></div><div class="card stock"><div class="sh"><span class="flag">🇺🇸</span><b>엔비디아(NVDA)</b><em class="down">-9.26%</em></div><p>중간선거 후 AI 데이터센터 규제 우려로 반도체주가 일제히 하락하는 가운데 181.60달러로 마감.</p></div></div><p class="note">※ 추천이 아닌 참고용 정보입니다. 투자 판단과 책임은 본인에게 있습니다.</p></section>
-<section><h2>✨ 오늘의 한마디</h2><blockquote class="quote">오늘의 운세: 급할수록 빵집 앞에서 한 번 멈추게 됩니다. 따끈한 빵 냄새가 오늘의 가장 확실한 호재예요.</blockquote></section>
-<footer class="foot">00:04 생성 · 자동 발행</footer>
+<section><h2>📈 오늘의 경제</h2><div class="inds"><div class="ind"><span>코스피</span><b>5,383.80</b><em class="down">-5.28%</em></div><div class="ind"><span>나스닥</span><b>24,315.00</b><em class="down">-5.52%</em></div><div class="ind"><span>S&amp;P500</span><b>7,353.73</b><em class="down">-4.36%</em></div><div class="ind"><span>원/달러</span><b>1,342.10원</b><em class="up">+0.6원</em></div></div><p class="mnote">🗞️ AI 규제 걱정에 미국·한국 증시가 크게 빠진 날, 월급 계좌도 놀랐을 듯해요.</p><div class="grid"><div class="card eco"><h3>AI 규제 우려에 나스닥 5.5% 폭락</h3><p>미 중간선거에서 민주당이 승리하자 데이터센터 규제 우려가 커져 나스닥이 5.52% 내렸다.</p><p class="view">💭 <b>생각해볼 관점</b> 지수가 크게 흔들린 날엔 내 계좌보다 원칙부터 한 번 점검해보자.</p><a class="emore" href="https://www.newspim.com/news/view/20261106000030" target="_blank" rel="noopener noreferrer">근거 기사 →</a></div><div class="card eco"><h3>코스피 5.28% 급락, 5,383 마감</h3><p>외국인이 3조 원대를 팔며 코스피가 300포인트 넘게 빠져 4월 초 이후 최저로 마감했다.</p><p class="view">💭 <b>생각해볼 관점</b> 환율은 1,342원대로 잠잠했다. 수입 원재료 부담이 당장 늘지는 않는 신호.</p><a class="emore" href="https://m.news.nate.com/view/20261105n25231" target="_blank" rel="noopener noreferrer">근거 기사 →</a></div></div><div class="card tip"><span class="etag">💡 오늘의 머니 팁 · 용어</span><h3>분산투자, 바구니를 나눈다는 뜻</h3><p>분산투자는 돈을 한 곳에 몰지 않고 여러 자산에 나눠 두는 방식이다. 점심 메뉴를 하루 한 가지로만 정하지 않는 것과 비슷하다. 한 곳이 크게 흔들려도 전체 충격을 줄이려는 구조일 뿐 손실을 막아주지는 않는다.</p><p class="note">※ 참고용 정보이며 특정 상품 추천이 아닙니다. 가입 조건은 공식 안내를 확인하세요.</p></div></section>
+<section><h2>🔎 오늘 주목받는 종목</h2><div class="grid"><div class="card stock"><div class="sh"><span class="flag">🇰🇷</span><b>삼성전자(005930)</b></div><p>5일 코스피가 5.28% 급락한 가운데 외국인 순매도가 이어지며 삼성전자·SK하이닉스 등 반도체 대형주가 크게 하락했다는 보도.</p></div><div class="card stock"><div class="sh"><span class="flag">🇺🇸</span><b>엔비디아(NVDA)</b><em class="down">-9.26%</em></div><p>중간선거 후 AI 데이터센터 규제 우려로 반도체주가 급락하며 필라델피아 반도체지수가 12.25% 하락한 가운데 함께 내렸다.</p></div></div><p class="note">※ 추천이 아닌 참고용 정보입니다. 투자 판단과 책임은 본인에게 있습니다.</p></section>
+<section><h2>✨ 오늘의 한마디</h2><blockquote class="quote">오늘 영하 날씨엔 갓 구운 빵 하나가 난로보다 오래 따뜻하다는 운세. 출근길에 빵집 앞을 한 번 천천히 지나가 보자.</blockquote></section>
+<footer class="foot">00:11 생성 · 자동 발행</footer>
 </div></body></html>
