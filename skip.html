@@ -33,7 +33,8 @@ input{width:100%;padding:14px;font-size:16px;border-radius:12px;border:1px solid
 
 <div id="main" hidden>
   <button id="skip">😴 내일 아침 브리핑 쉬기</button>
-  <button id="undo" class="alt">☕ 다시 받기 (쉬기 취소)</button>
+  <button id="get" class="alt">📬 내일 아침 브리핑 받기 (주말·휴일에도)</button>
+  <button id="undo" class="alt">↩️ 원래대로 (평일만 받기)</button>
   <div id="msg"></div>
   <button id="reset" class="link">열쇠 다시 입력</button>
 </div>
@@ -52,7 +53,7 @@ function say(t, cls) { $("msg").textContent = t; $("msg").className = cls || "";
 
 async function run(mode) {
   const tok = get(); if (!tok) return show();
-  $("skip").disabled = $("undo").disabled = true; say("요청 중…");
+  setBusy(true); say("요청 중…");
   try {
     const r = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/${WF}/dispatches`, {
       method: "POST",
@@ -60,17 +61,17 @@ async function run(mode) {
                  "X-GitHub-Api-Version": "2022-11-28", "Content-Type": "application/json" },
       body: JSON.stringify({ ref: "main", inputs: { dates: "내일아침", mode } })
     });
-    if (r.status === 204) say(mode === "쉬기"
-      ? "✅ 요청했어요! 곧 카톡으로 '쉬기 등록' 확인 메시지가 와요."
-      : "✅ 요청했어요! 곧 카톡으로 '다시 받기' 확인 메시지가 와요.", "ok");
+    if (r.status === 204) say("✅ 요청했어요! 곧 카톡으로 '" + ({"쉬기":"쉬기 등록","받기":"받기 등록"}[mode] || "원래대로") + "' 확인 메시지가 와요.", "ok");
     else if (r.status === 401 || r.status === 403 || r.status === 404)
       say("열쇠가 맞지 않거나 만료됐어요. 아래 '열쇠 다시 입력'으로 새로 넣어주세요. (" + r.status + ")", "err");
     else say("실패했어요 (" + r.status + "). 잠시 뒤 다시 시도해 주세요.", "err");
   } catch (e) { say("네트워크 오류예요. 연결을 확인해 주세요.", "err"); }
-  $("skip").disabled = $("undo").disabled = false;
+  setBusy(false);
 }
+function setBusy(b) { ["skip", "get", "undo"].forEach(id => $(id).disabled = b); }
 $("skip").onclick = () => run("쉬기");
-$("undo").onclick = () => run("취소");
+$("get").onclick = () => run("받기");
+$("undo").onclick = () => run("원래대로");
 $("save").onclick = () => { const v = $("tok").value.trim(); if (v) { set(v); $("tok").value = ""; show(); } };
 $("reset").onclick = () => { set(null); say(""); show(); };
 show();
