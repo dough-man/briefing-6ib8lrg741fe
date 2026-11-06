@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>아침 브리핑 11/7</title>
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<meta name="theme-color" content="#f43f5e"><style>
+:root{--bg:#f6f4f1;--card:#fff;--ink:#1f2328;--sub:#5b6470;--line:#e7e2db;--accent:#c2410c;
+--hero1:#fde7d3;--hero2:#fff4e8;--up:#d92d20;--down:#2563eb;--shadow:0 1px 3px rgba(0,0,0,.06),0 6px 18px rgba(0,0,0,.05)}
+@media (prefers-color-scheme:dark){:root{--bg:#14110f;--card:#1f1b18;--ink:#f1ece6;--sub:#b3aba2;--line:#332d28;
+--accent:#fb923c;--hero1:#3a2417;--hero2:#2a1d14;--up:#f87171;--down:#60a5fa;--shadow:none}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.55}
+.wrap{max-width:760px;margin:0 auto;padding:16px 16px 48px}
+header{padding:8px 2px 14px}header .date{color:var(--sub);font-size:13px}
+header h1{margin:2px 0 0;font-size:22px;letter-spacing:-.02em}
+h2{font-size:16px;margin:26px 2px 10px}
+.hero{background:linear-gradient(135deg,var(--hero1),var(--hero2));border-radius:20px;padding:18px;box-shadow:var(--shadow)}
+.hero-text p{margin:0 0 4px;font-size:17px;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+.chip{background:var(--card);border-radius:999px;padding:6px 12px;font-size:13px;box-shadow:var(--shadow)}
+.commute{font-size:13px;color:var(--sub);margin-top:6px}
+.strip{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;margin-top:14px;overflow-x:auto}
+.day{background:var(--card);border-radius:12px;padding:8px 2px;text-align:center;min-width:44px;display:flex;flex-direction:column;gap:2px}
+.day .dow{font-size:12px;color:var(--sub)}.day .ico{font-size:20px}.day .t{font-size:12px}.day .t b{font-size:13px}
+.day .w{font-size:11px;min-height:16px}.day i{font-style:normal}
+.weekline{font-size:13px;color:var(--sub);margin:12px 0 0}
+.grid{display:grid;gap:12px}@media(min-width:620px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:var(--card);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;color:inherit;text-decoration:none;display:block}
+.news .thumb{height:150px;background:#ddd center/cover no-repeat}
+.news .thumb.ph{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--c),#0003);font-size:44px}
+.news .body{padding:14px}
+.tag{display:inline-block;font-size:12px;font-weight:700;color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent);padding:2px 9px;border-radius:999px}
+.when{font-size:12px;color:var(--sub);margin-left:8px}
+.news h3{font-size:16px;margin:8px 0 6px;line-height:1.35}.news p{margin:0;font-size:14px;color:var(--sub)}
+.more{display:inline-block;margin-top:10px;font-size:13px;color:var(--accent);font-weight:700}
+.inds{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}@media(min-width:620px){.inds{grid-template-columns:repeat(4,1fr)}}
+.ind{background:var(--card);border-radius:14px;box-shadow:var(--shadow);padding:10px 12px;display:flex;flex-direction:column}
+.ind span{font-size:12px;color:var(--sub)}.ind b{font-size:16px}.ind em{font-style:normal;font-size:13px;font-weight:700}
+.mnote{font-size:14px;color:var(--sub);margin:10px 2px 12px}
+.view{margin:8px 0 0!important;padding:8px 10px;background:color-mix(in srgb,var(--accent) 10%,transparent);border-radius:10px;color:var(--ink)!important}
+.tip{padding:14px;margin-top:12px;border-left:5px solid var(--accent)}.tip h3{margin:2px 0 6px;font-size:15px}.tip p{margin:0;font-size:14px;color:var(--sub)}
+.etag{display:inline-block;font-size:12px;font-weight:700;color:var(--accent);margin-bottom:4px}
+.emore{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--accent);text-decoration:none}
+.eco,.stock{padding:14px}.eco h3{margin:0 0 6px;font-size:15px}.eco p,.stock p{margin:0;font-size:14px;color:var(--sub)}
+.sh{display:flex;align-items:center;gap:8px;margin-bottom:6px}.flag{font-size:20px}.sh b{flex:1;font-size:15px}
+.sh em{font-style:normal;font-weight:800;font-size:14px}.up{color:var(--up)}.down{color:var(--down)}
+.note{font-size:12px;color:var(--sub);margin:10px 2px 0}
+.quote{margin:0;padding:22px 20px;border-radius:18px;background:var(--card);box-shadow:var(--shadow);font-size:18px;font-weight:600;line-height:1.6;border-left:5px solid var(--accent)}
+.quote footer{margin-top:8px;font-size:13px;font-weight:400;color:var(--sub)}
+footer.foot{margin-top:30px;text-align:center;font-size:12px;color:var(--sub)}
+</style></head>
+<body><div class="wrap">
+<header><div class="date">2026.11.7 (토)</div><h1>☕ 오늘의 아침 브리핑</h1></header>
+
+<section class="hero">
+  <div class="hero-text"><p>🧣 맑지만 쌀쌀 · -1~6° · 출근길 체감 -5°</p><p>목도리·장갑에 두툼한 겉옷 필수, 미끄럼 조심. 햇살 좋은 토요일 아침이에요.</p></div>
+  <div class="chips"><div class="chip"><b>관악구</b> 🌤️ -1° / 6° · ☔ 0% · 💨 8m/s</div><div class="chip"><b>서초구</b> 🌤️ -1° / 7° · ☔ 0% · 💨 8m/s</div></div>
+  <div class="commute">🚇 출근 -1°(체감 -5°) · 퇴근 5°(체감 1°)</div>
+  <div class="strip"><div class="day"><span class="dow">토</span><span class="ico">🌤️</span><span class="t"><b>6°</b> -1°</span><span class="w"><i title="영하">🥶</i></span></div><div class="day"><span class="dow">일</span><span class="ico">🌦️</span><span class="t"><b>8°</b> 2°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">월</span><span class="ico">🌦️</span><span class="t"><b>10°</b> 2°</span><span class="w"><i title="비">☔</i></span></div><div class="day"><span class="dow">화</span><span class="ico">🌤️</span><span class="t"><b>10°</b> 0°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">수</span><span class="ico">🌤️</span><span class="t"><b>14°</b> 4°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">목</span><span class="ico">☁️</span><span class="t"><b>15°</b> 5°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">금</span><span class="ico">☁️</span><span class="t"><b>15°</b> 7°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">토</span><span class="ico">🌦️</span><span class="t"><b>16°</b> 6°</span><span class="w">&nbsp;</span></div></div>
+  <p class="weekline">토(7일) 맑음, 영하권 출발 -1~6°<br>일(8일) 이슬비 가능(확률 41%), 월(9일) 약한 비 2mm 안팎<br>화(10일) 맑음, 아침 0°대 / 수~목(11~12일) 최고 14~15°로 일교차 큼<br>토(14일) 이슬비 가능(확률 24%), 기온은 16° 안팎</p>
+</section>
+<section><h2>📰 업계 뉴스</h2><div class="grid">
+<a class="card news" href="https://www.hankyung.com/article/202611045655g" target="_blank" rel="noopener noreferrer">
+  <div class="thumb" style="background-image:url('https://img.hankyung.com/photo/202611/01.46307542.1.jpg')"></div>
+  <div class="body">
+    <span class="tag" style="--c:#0891b2">🤝 고객사</span><span class="when">11/4 기사</span>
+    <h3>백미당, 대한항공 비즈니스석 디저트 공급 시작</h3>
+    <p>남양유업 백미당이 11월 1일부터 대한항공 중장거리 프레스티지석에 아이스크림 2종을 공급, 기존 하겐다즈 자리를 대체. 기내 디저트도 국내 브랜드로 바뀌는 흐름이라 항공 B2B 제안 시 참고할 사례.</p>
+    <span class="more">기사 보기 →</span>
+  </div>
+</a>
+<a class="card news" href="https://biz.heraldcorp.com/article/10924218" target="_blank" rel="noopener noreferrer">
+  <div class="thumb" style="background-image:url('https://wimg.heraldcorp.com/news/cms/2026/11/03/news-p.v1.20261103.0e5fcd6cb0424bdfbb66b4ab0de9c919_P1.jpg')"></div>
+  <div class="body">
+    <span class="tag" style="--c:#7c3aed">✨ 트렌드</span><span class="when">11/3 기사</span>
+    <h3>삼립, &#x27;호빵맨&#x27; 콜라보 베이커리 4종 출시</h3>
+    <p>삼립이 호빵맨 캐릭터 베이커리 4종을 내놓고 띠부씰 100종을 동봉. 11월 중 신제품을 추가할 계획. 수집형 굿즈 결합이 계속 통한다는 신호라 단체·테마파크용 캐릭터 상품 기획에 참고할 만함.</p>
+    <span class="more">기사 보기 →</span>
+  </div>
+</a>
+<a class="card news" href="https://www.g-enews.com/article/Industry/2026/11/20261105090130451ea14faf6f5_1" target="_blank" rel="noopener noreferrer">
+  <div class="thumb" style="background-image:url('https://nimage.g-enews.com/phpwas/restmb_allidxmake.php?idx=5&amp;simg=2026110509022709590ea14faf6f5175197343.jpg')"></div>
+  <div class="body">
+    <span class="tag" style="--c:#0891b2">🤝 고객사</span><span class="when">11/5 기사</span>
+    <h3>대한항공, USA투데이 어워즈 기내식 등 3관왕</h3>
+    <p>대한항공이 USA투데이 독자선택상에서 기내식·승무원·프리미엄석 부문 1위. 한식 재해석 메뉴와 사전주문 서비스가 강점으로 언급. 12월 아시아나 합병을 앞두고 서비스 기준 유지가 과제라 기내식 기획 눈높이도 유지될 전망.</p>
+    <span class="more">기사 보기 →</span>
+  </div>
+</a></div></section>
+<section><h2>📈 오늘의 경제</h2><div class="inds"><div class="ind"><span>코스피</span><b>5,059.69</b><em class="down">-6.02%</em></div><div class="ind"><span>나스닥</span><b>24,315.00</b><em class="down">-5.52%</em></div><div class="ind"><span>S&amp;P500</span><b>7,353.73</b><em class="down">-4.36%</em></div><div class="ind"><span>원/달러</span><b>1,356.6원</b><em class="up">+14.5원</em></div></div><p class="mnote">🗞️ 계좌도 출근길 기분도 파랗게 질린 날. 오늘은 숫자보다 점심 메뉴로 마음을 달래요.</p><div class="grid"><div class="card eco"><h3>코스피 6% 급락, 장중 5,000선 무너져</h3><p>6일 코스피가 6.02% 내린 5,059.69에 마감. 외국인이 2조 7천억원대를 순매도하며 반도체가 크게 밀렸다.</p><p class="view">💭 <b>생각해볼 관점</b> 월급날 전에 계좌가 흔들리면 마음도 흔들려요. 큰 하락일엔 숫자보다 내 투자 기간을 먼저 떠올려보자.</p><a class="emore" href="https://www.newspim.com/news/view/20261106000997" target="_blank" rel="noopener noreferrer">근거 기사 →</a></div><div class="card eco"><h3>뉴욕 증시 급락, 나스닥 5.5% 하락</h3><p>5일 나스닥이 5.52% 내린 24,315.00으로 마감. 중간선거 뒤 AI 데이터센터 규제 우려와 퀄컴 실적 부진이 겹쳤다.</p><p class="view">💭 <b>생각해볼 관점</b> 기업은 대부분 오늘도 빵을 팔지만 주가는 기분을 탄다. 환율·원가 영향은 어떨지 함께 살펴보자.</p><a class="emore" href="https://www.topstarnews.net/news/articleView.html?idxno=16269494" target="_blank" rel="noopener noreferrer">근거 기사 →</a></div></div><div class="card tip"><span class="etag">💡 오늘의 머니 팁 · 용어</span><h3>환율이 오른다는 건 무슨 뜻일까</h3><p>환율은 1달러를 사는 데 필요한 원화 금액이에요. 어제 1,356.6원으로 14.5원 올랐는데, 원화 가치가 그만큼 내렸다는 뜻이에요. 해외 직구·여행 비용과 수입 원재료 값에 영향을 줄 수 있어요.</p><p class="note">※ 참고용 정보이며 특정 상품 추천이 아닙니다. 가입 조건은 공식 안내를 확인하세요.</p></div></section>
+<section><h2>🔎 오늘 주목받는 종목</h2><div class="grid"><div class="card stock"><div class="sh"><span class="flag">🇰🇷</span><b>SK하이닉스(000660)</b><em class="down">-10.44%</em></div><p>미국 AI 데이터센터 규제 우려로 반도체주가 급락한 가운데 113만 2천원에 마감. 외국인이 약 1조 9천억원 순매도.</p></div><div class="card stock"><div class="sh"><span class="flag">🇺🇸</span><b>엔비디아(NVDA)</b><em class="down">-9.26%</em></div><p>중간선거 후 AI 데이터센터 규제 우려로 반도체주가 일제히 하락하는 가운데 181.60달러로 마감.</p></div></div><p class="note">※ 추천이 아닌 참고용 정보입니다. 투자 판단과 책임은 본인에게 있습니다.</p></section>
+<section><h2>✨ 오늘의 한마디</h2><blockquote class="quote">오늘의 운세: 급할수록 빵집 앞에서 한 번 멈추게 됩니다. 따끈한 빵 냄새가 오늘의 가장 확실한 호재예요.</blockquote></section>
+<footer class="foot">00:04 생성 · 자동 발행</footer>
+</div></body></html>
