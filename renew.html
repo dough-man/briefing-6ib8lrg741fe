@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>연간 토큰 갱신</title>
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<style>
+:root{--bg:#f6f4f1;--card:#fff;--ink:#1f2328;--sub:#5b6470;--accent:#c2410c;--code:#f1ece6}
+@media (prefers-color-scheme:dark){:root{--bg:#14110f;--card:#1f1b18;--ink:#f1ece6;--sub:#b3aba2;--accent:#fb923c;--code:#2a2420}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;line-height:1.6}
+.wrap{max-width:720px;margin:0 auto;padding:18px 16px 48px}
+h1{font-size:22px;margin:8px 0 4px}h2{font-size:17px;margin:0 0 8px}
+.s{color:var(--sub);font-size:14px;margin:0 0 16px}
+.card{background:var(--card);border-radius:16px;padding:16px;margin:12px 0;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+ol{margin:6px 0 0;padding-left:20px;font-size:15px}li{margin:4px 0}
+code{background:var(--code);padding:1px 6px;border-radius:6px;font-size:13px;word-break:break-all}
+pre{background:var(--code);border-radius:10px;padding:10px;overflow-x:auto;font-size:12px;line-height:1.5;margin:8px 0 0}
+.tag{display:inline-block;font-size:12px;font-weight:700;color:var(--accent);margin-bottom:4px}
+a{color:var(--accent)}
+</style></head>
+<body><div class="wrap">
+<h1>🔔 연 1회 토큰 갱신</h1>
+<p class="s">세 가지 모두 11월 초에 만료돼요. <b>PC에서</b> 하는 작업이고 약 20분 걸려요. 순서대로 하세요.</p>
+
+<div class="card"><span class="tag">1단계</span><h2>Claude 토큰</h2>
+<ol>
+<li>PC 터미널(PowerShell)에서 프로젝트 폴더를 열어요.</li>
+<li><code>claude.cmd setup-token</code> 실행 → Pro 계정으로 승인 → 토큰 복사</li>
+<li>공백이 섞이지 않게 정리한 뒤 확인하고 등록해요. 자세한 명령은 아래 저장소 문서를 보세요.</li>
+</ol></div>
+
+<div class="card"><span class="tag">2단계</span><h2>SECRETS_PAT (카카오 토큰 자동 갱신용)</h2>
+<ol>
+<li><a href="https://github.com/settings/personal-access-tokens/new">GitHub 토큰 만들기</a></li>
+<li>이름 <code>briefing-secrets</code>, 만료 1년, <b>morning-briefing</b> 저장소만</li>
+<li>Repository permissions → <b>Secrets: Read and write</b> → Generate token → 복사 버튼</li>
+<li>터미널: <code>gh secret set SECRETS_PAT --repo dough-man/morning-briefing</code> → 붙여넣기</li>
+</ol></div>
+
+<div class="card"><span class="tag">3단계</span><h2>쉬기 열쇠 (폰 버튼용)</h2>
+<ol>
+<li>같은 주소에서 이름 <code>skip-button</code>, 만료 1년, <b>morning-briefing</b> 저장소만</li>
+<li>Repository permissions → <b>Actions: Read and write</b> (2단계와 권한이 달라요) → Generate token → 복사</li>
+<li>폰으로 보내고, <a href="skip.html">버튼 페이지</a> 아래 "열쇠 다시 입력"에 붙여넣기</li>
+</ol></div>
+
+<div class="card"><span class="tag">4단계</span><h2>확인</h2>
+<ol>
+<li>GitHub → Actions → 아침 브리핑 → Run workflow (<code>force</code> + <code>dry_run</code>) → 초록 체크</li>
+<li>폰 버튼 페이지에서 "↩️ 원래대로"를 눌러 카톡 확인 메시지가 오는지 봐요.</li>
+</ol></div>
+
+<div class="card"><h2>자세한 명령·막혔을 때</h2>
+<p class="s" style="margin:0">저장소 <code>dough-man/morning-briefing</code> 의 <code>docs/연간갱신체크리스트.md</code> 와 <code>docs/복구가이드.md</code> 에 전체 명령이 있어요.
+새 Claude 에게 "docs/연간갱신체크리스트.md 보고 같이 해줘"라고 해도 돼요.</p></div>
+</div></body></html>
