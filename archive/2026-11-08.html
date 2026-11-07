@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>아침 브리핑 11/8</title>
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<meta name="theme-color" content="#f43f5e"><style>
+:root{--bg:#f6f4f1;--card:#fff;--ink:#1f2328;--sub:#5b6470;--line:#e7e2db;--accent:#c2410c;
+--hero1:#fde7d3;--hero2:#fff4e8;--up:#d92d20;--down:#2563eb;--shadow:0 1px 3px rgba(0,0,0,.06),0 6px 18px rgba(0,0,0,.05)}
+@media (prefers-color-scheme:dark){:root{--bg:#14110f;--card:#1f1b18;--ink:#f1ece6;--sub:#b3aba2;--line:#332d28;
+--accent:#fb923c;--hero1:#3a2417;--hero2:#2a1d14;--up:#f87171;--down:#60a5fa;--shadow:none}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.55}
+.wrap{max-width:760px;margin:0 auto;padding:16px 16px 48px}
+header{padding:8px 2px 14px}header .date{color:var(--sub);font-size:13px}
+header h1{margin:2px 0 0;font-size:22px;letter-spacing:-.02em}
+h2{font-size:16px;margin:26px 2px 10px}
+.hero{background:linear-gradient(135deg,var(--hero1),var(--hero2));border-radius:20px;padding:18px;box-shadow:var(--shadow)}
+.hero-text p{margin:0 0 4px;font-size:17px;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+.chip{background:var(--card);border-radius:999px;padding:6px 12px;font-size:13px;box-shadow:var(--shadow)}
+.commute{font-size:13px;color:var(--sub);margin-top:6px}
+.strip{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;margin-top:14px;overflow-x:auto}
+.day{background:var(--card);border-radius:12px;padding:8px 2px;text-align:center;min-width:44px;display:flex;flex-direction:column;gap:2px}
+.day .dow{font-size:12px;color:var(--sub)}.day .md{font-size:11px;color:var(--sub)}.day .ico{font-size:20px}.day .t{font-size:12px}.day .t b{font-size:13px}
+.day .w{font-size:11px;min-height:16px}.day i{font-style:normal}
+.weekend{background:var(--card);border-radius:14px;padding:12px 14px;margin-top:12px;box-shadow:var(--shadow)}.weekend b{font-size:14px}.weekend p{margin:4px 0 0;font-size:14px}
+.weekline{font-size:13px;color:var(--sub);margin:12px 0 0}
+.grid{display:grid;gap:12px}@media(min-width:620px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:var(--card);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;color:inherit;text-decoration:none;display:block}
+.news .thumb{height:150px;background:#ddd center/cover no-repeat}
+.news .thumb.ph{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--c),#0003);font-size:44px}
+.news .body{padding:14px}
+.tag{display:inline-block;font-size:12px;font-weight:700;color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent);padding:2px 9px;border-radius:999px}
+.when{font-size:12px;color:var(--sub);margin-left:8px}
+.news h3{font-size:16px;margin:8px 0 6px;line-height:1.35}.news p{margin:0;font-size:14px;color:var(--sub)}
+.more{display:inline-block;margin-top:10px;font-size:13px;color:var(--accent);font-weight:700}
+.inds{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}@media(min-width:620px){.inds{grid-template-columns:repeat(3,1fr)}}
+.ind{background:var(--card);border-radius:14px;box-shadow:var(--shadow);padding:10px 12px;display:flex;flex-direction:column}
+.ind span{font-size:12px;color:var(--sub)}.ind b{font-size:16px}.ind em{font-style:normal;font-size:13px;font-weight:700}
+.mnote{font-size:14px;color:var(--sub);margin:10px 2px 12px}
+.pad{padding:14px}.pad h3{margin:2px 0 6px;font-size:15px}.sm{margin:0;font-size:14px;color:var(--sub)}.pad a,.note a{color:var(--accent);font-weight:700;text-decoration:none}
+.meals{display:grid;grid-template-columns:1fr 1fr;gap:10px}.meal{background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:12px 14px}
+.meal .ml{font-size:12px;color:var(--sub);display:block}.meal b{font-size:16px}.meal p{margin:4px 0 0;font-size:13px;color:var(--sub)}
+.sch{list-style:none;margin:0;padding:0;font-size:15px}.sch li{padding:5px 0;border-bottom:1px solid var(--line)}.sch li:last-child{border:0}.sd{display:inline-block;min-width:58px;color:var(--sub);font-size:13px}
+.wk{margin:0;padding-left:18px;font-size:14px}.wk li{margin:3px 0}
+.view{margin:8px 0 0!important;padding:8px 10px;background:color-mix(in srgb,var(--accent) 10%,transparent);border-radius:10px;color:var(--ink)!important}
+.tip{padding:14px;margin-top:12px;border-left:5px solid var(--accent)}.tip h3{margin:2px 0 6px;font-size:15px}.tip p{margin:0;font-size:14px;color:var(--sub)}
+.etag{display:inline-block;font-size:12px;font-weight:700;color:var(--accent);margin-bottom:4px}
+.emore{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--accent);text-decoration:none}
+.eco,.stock{padding:14px}.eco h3{margin:0 0 6px;font-size:15px}.eco p,.stock p{margin:0;font-size:14px;color:var(--sub)}
+.sh{display:flex;align-items:center;gap:8px;margin-bottom:6px}.flag{font-size:20px}.sh b{flex:1;font-size:15px}
+.sh em{font-style:normal;font-weight:800;font-size:14px}.up{color:var(--up)}.down{color:var(--down)}
+.note{font-size:12px;color:var(--sub);margin:10px 2px 0}
+.quote{margin:0;padding:22px 20px;border-radius:18px;background:var(--card);box-shadow:var(--shadow);font-size:18px;font-weight:600;line-height:1.6;border-left:5px solid var(--accent)}
+.quote footer{margin-top:8px;font-size:13px;font-weight:400;color:var(--sub)}
+footer.foot{margin-top:30px;text-align:center;font-size:12px;color:var(--sub)}
+</style><script>(function(){try{if(/KAKAOTALK/i.test(navigator.userAgent)){location.href="kakaotalk://web/openExternal?url="+encodeURIComponent(location.href);}}catch(e){}})();</script></head>
+<body><div class="wrap">
+<header><div class="date">2026.11.8 (일)</div><h1>☕ 오늘의 아침 브리핑</h1></header>
+<section><h2>📅 내 일정</h2><div class="card pad"><ul class="sch"><li><span class="sd">오늘</span><b>19:00</b> 보드게임 설입</li></ul></div></section>
+
+<section class="hero">
+  <div class="hero-text"><p>🌧️ 이슬비 오는 일요일 · 2~6° · 아침 체감 영하</p><p>우산 챙기고 두툼한 겉옷 필수. 빗소리 들으며 영화 한 편 보기 좋은 날.</p></div>
+  <div class="chips"><div class="chip"><b>관악구</b> 🌦️ 3° / 6° · ☔ 38% · 💨 5m/s</div><div class="chip"><b>서초구</b> 🌦️ 1° / 6° · ☔ 38% · 💨 4m/s</div></div>
+  <div class="commute">🚇 출근 3°(체감 0°) · 퇴근 5°(체감 2°)</div>
+  <div class="strip"><div class="day"><span class="dow">일</span><span class="md">11/8</span><span class="ico">🌦️</span><span class="t"><b>6°</b> 3°</span><span class="w"><i title="비">☔</i></span></div><div class="day"><span class="dow">월</span><span class="md">11/9</span><span class="ico">⛅</span><span class="t"><b>11°</b> 4°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">화</span><span class="md">11/10</span><span class="ico">☀️</span><span class="t"><b>10°</b> 1°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">수</span><span class="md">11/11</span><span class="ico">⛅</span><span class="t"><b>14°</b> 5°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">목</span><span class="md">11/12</span><span class="ico">☁️</span><span class="t"><b>15°</b> 6°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">금</span><span class="md">11/13</span><span class="ico">🌫️</span><span class="t"><b>14°</b> 5°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">토</span><span class="md">11/14</span><span class="ico">🌧️</span><span class="t"><b>13°</b> 7°</span><span class="w"><i title="비">☔</i></span></div><div class="day"><span class="dow">일</span><span class="md">11/15</span><span class="ico">🌧️</span><span class="t"><b>15°</b> 3°</span><span class="w"><i title="비">☔</i><i title="강풍">💨</i></span></div></div>
+  <p class="weekline">오늘 11/8(일) 🌧️ 이슬비 2~6° · 비 38%, 쌀쌀<br>내일 11/9(월) ⛅ 구름 조금 3~11° · 아침 쌀쌀, 일교차 큼<br>모레 11/10(화) ☀️ 맑음 1~10° · 아침 영상 1도 안팎, 겉옷 필수</p>
+  <div class="weekend"><b>🏕️ 이번 주말은?</b><p>11/14(토) 🌧️ 6~13° 비 · 11/15(일) 🌧️ 3~15° 비·강풍(돌풍 16m/s)<br>두 날 모두 비 예보. 토요일은 전시·영화·카페 책 한 권, 일요일은 바람이 세니 실내 운동이나 집콕 영화 추천.</p></div>
+</section>
+<section><h2>📰 업계 뉴스</h2><div class="grid">
+<a class="card news" href="https://www.g-enews.com/article/Distribution/2026/11/202611031528342294740eacf404_1" rel="noopener noreferrer">
+  <div class="thumb" style="background-image:url('https://nimage.g-enews.com/phpwas/restmb_allidxmake.php?idx=5&amp;simg=2026110315395601213740eacf40421160100194.jpg')"></div>
+  <div class="body">
+    <span class="tag" style="--c:#2563eb">📊 시장</span><span class="when">11/3 기사</span>
+    <h3>10월 외식·가공식품 물가 2.9%↑, 11월에도 줄인상</h3>
+    <p>10월 가공식품·외식 물가가 각각 전년 대비 2.9% 올랐고, 11월에도 매일유업(3~8%)·파스쿠찌(평균 4.9%) 가격 인상이 이어짐. 원가·소비자 가격 부담이 계속돼 B2B 단가 협의 때 근거 자료로 쓸 만함.</p>
+    <span class="more">기사 보기 →</span>
+  </div>
+</a></div></section>
+
+<section><h2>🍽️ 오늘 뭐 먹지?</h2><div class="meals"><div class="meal"><span class="ml">🍱 점심</span><b>바지락 칼국수</b><p>이슬비 오는 일요일, 후루룩 따끈한 국물이 딱이에요.</p></div><div class="meal"><span class="ml">🌙 저녁</span><b>닭한마리</b><p>월요일 전날 든든하게, 국물까지 싹 비우는 한 끼.</p></div></div></section>
+
+<section><h2>📈 오늘의 경제</h2><div class="inds"><div class="ind"><span>코스피</span><b>5,059.69</b><em class="down">-6.02%</em></div><div class="ind"><span>코스닥</span><b>644.27</b><em class="down">-5.03%</em></div><div class="ind"><span>나스닥</span><b>24,579.42</b><em class="up">+1.09%</em></div><div class="ind"><span>S&amp;P500</span><b>7,376.86</b><em class="up">+0.31%</em></div><div class="ind"><span>원/달러</span><b>1,356.6원</b><em class="up">+14.5원</em></div><div class="ind"><span>엔화(100엔·참고)</span><b>858.19원</b><em class="up">+1.13%</em></div></div><p class="mnote">🗞️ 금요일 한국 증시는 롤러코스터였고, 미국은 하루 만에 반등했어요. 월요일 개장 분위기를 지켜봐요.</p><div class="grid"><div class="card eco"><h3>미 증시 반등, 나스닥은 4주 연속 하락</h3><p>6일 나스닥이 1.09% 올랐지만 주간으로는 3.4% 내려 4주 연속 하락. 10월 고용이 좋아 금리 인하 기대는 약해짐.</p><p class="view">💭 <b>생각해볼 관점</b> 월급 오른 줄 알았는데 물가도 같이 올랐을 때의 기분, 금리 인하가 늦어지면 환율·원가에도 부담이 이어져요.</p><a class="emore" href="https://www.thefairnews.co.kr/news/articleView.html?idxno=93363" rel="noopener noreferrer">근거 기사 →</a></div></div><div class="card tip"><span class="etag">💡 오늘의 머니 팁 · 용어</span><h3>환율, 달러 한 장의 가격표</h3><p>환율은 달러 1개를 사는 데 필요한 원화 금액이에요. 6일 마감은 1,356.6원으로, 숫자가 오르면 원화 가치가 내린 거예요. 해외 직구나 수입 원재료의 원화 가격이 올라가는 이유이기도 해요.</p><p class="note">※ 참고용 정보이며 특정 상품 추천이 아닙니다. 가입 조건은 공식 안내를 확인하세요.</p></div></section>
+
+<section><h2>🔎 오늘 주목받는 종목</h2><div class="grid"><div class="card stock"><div class="sh"><span class="flag">🇰🇷</span><b>SK하이닉스(000660)</b><em class="down">-9.73%</em></div><p>6일 코스피 급락장에서 9.73% 내린 114만 1,000원에 마감. 삼성전자도 6.25% 하락했음.</p></div><div class="card stock"><div class="sh"><span class="flag">🇺🇸</span><b>램리서치(LRCX)</b></div><p>6일 최대 250억 달러 규모의 자사주 매입 계획을 발표해 관심을 받았음. 반도체주 반등 장세에서 거론됨.</p></div></div><p class="note">※ 추천이 아닌 참고용 정보입니다. 투자 판단과 책임은 본인에게 있습니다.</p></section>
+<section><h2>✨ 오늘의 한마디</h2><blockquote class="quote">문어의 피가 푸른색인 건 아세요? 철 대신 구리 성분의 헤모시아닌을 쓰기 때문이에요. 심장도 3개인데, 하나는 온몸에, 둘은 아가미에 피를 보내요. 그럼 우리는 왜 하나로 버틸까요?<footer>— 문어의 구리 혈액과 심장 3개</footer></blockquote></section>
+<footer class="foot"><a href="../notes.html">📚 모아보기</a> · 07:19 생성 · 자동 발행</footer>
+</div></body></html>
