@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>아침 브리핑 11/9</title>
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<meta name="theme-color" content="#f43f5e"><style>
+:root{--bg:#f6f4f1;--card:#fff;--ink:#1f2328;--sub:#5b6470;--line:#e7e2db;--accent:#c2410c;
+--hero1:#fde7d3;--hero2:#fff4e8;--up:#d92d20;--down:#2563eb;--shadow:0 1px 3px rgba(0,0,0,.06),0 6px 18px rgba(0,0,0,.05)}
+@media (prefers-color-scheme:dark){:root{--bg:#14110f;--card:#1f1b18;--ink:#f1ece6;--sub:#b3aba2;--line:#332d28;
+--accent:#fb923c;--hero1:#3a2417;--hero2:#2a1d14;--up:#f87171;--down:#60a5fa;--shadow:none}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.55}
+.wrap{max-width:760px;margin:0 auto;padding:16px 16px 48px}
+header{padding:8px 2px 14px}header .date{color:var(--sub);font-size:13px}
+header h1{margin:2px 0 0;font-size:22px;letter-spacing:-.02em}
+h2{font-size:16px;margin:26px 2px 10px}
+.hero{background:linear-gradient(135deg,var(--hero1),var(--hero2));border-radius:20px;padding:18px;box-shadow:var(--shadow)}
+.hero-text p{margin:0 0 4px;font-size:17px;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+.chip{background:var(--card);border-radius:999px;padding:6px 12px;font-size:13px;box-shadow:var(--shadow)}
+.commute{font-size:13px;color:var(--sub);margin-top:6px}
+.strip{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;margin-top:14px;overflow-x:auto}
+.day{background:var(--card);border-radius:12px;padding:8px 2px;text-align:center;min-width:44px;display:flex;flex-direction:column;gap:2px}
+.day .dow{font-size:12px;color:var(--sub)}.day .md{font-size:11px;color:var(--sub)}.day .ico{font-size:20px}.day .t{font-size:12px}.day .t b{font-size:13px}
+.day .w{font-size:11px;min-height:16px}.day i{font-style:normal}
+.weekend{background:var(--card);border-radius:14px;padding:12px 14px;margin-top:12px;box-shadow:var(--shadow)}.weekend b{font-size:14px}.weekend p{margin:4px 0 0;font-size:14px}
+.weekline{font-size:13px;color:var(--sub);margin:12px 0 0}
+.grid{display:grid;gap:12px}@media(min-width:620px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:var(--card);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;color:inherit;text-decoration:none;display:block}
+.news .thumb{height:150px;background:#ddd center/cover no-repeat}
+.news .thumb.ph{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--c),#0003);font-size:44px}
+.news .body{padding:14px}
+.tag{display:inline-block;font-size:12px;font-weight:700;color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent);padding:2px 9px;border-radius:999px}
+.when{font-size:12px;color:var(--sub);margin-left:8px}
+.news h3{font-size:16px;margin:8px 0 6px;line-height:1.35}.news p{margin:0;font-size:14px;color:var(--sub)}
+.more{display:inline-block;margin-top:10px;font-size:13px;color:var(--accent);font-weight:700}
+.inds{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}@media(min-width:620px){.inds{grid-template-columns:repeat(3,1fr)}}
+.ind{background:var(--card);border-radius:14px;box-shadow:var(--shadow);padding:10px 12px;display:flex;flex-direction:column}
+.ind span{font-size:12px;color:var(--sub)}.ind b{font-size:16px}.ind em{font-style:normal;font-size:13px;font-weight:700}
+.mnote{font-size:14px;color:var(--sub);margin:10px 2px 12px}
+.pad{padding:14px}.pad h3{margin:2px 0 6px;font-size:15px}.sm{margin:0;font-size:14px;color:var(--sub)}.pad a,.note a{color:var(--accent);font-weight:700;text-decoration:none}
+.meals{display:grid;grid-template-columns:1fr 1fr;gap:10px}.meal{background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:12px 14px}
+.meal .ml{font-size:12px;color:var(--sub);display:block}.meal b{font-size:16px}.meal p{margin:4px 0 0;font-size:13px;color:var(--sub)}
+.sch{list-style:none;margin:0;padding:0;font-size:15px}.sch li{padding:5px 0;border-bottom:1px solid var(--line)}.sch li:last-child{border:0}.sd{display:inline-block;min-width:58px;color:var(--sub);font-size:13px}
+.wk{margin:0;padding-left:18px;font-size:14px}.wk li{margin:3px 0}
+.view{margin:8px 0 0!important;padding:8px 10px;background:color-mix(in srgb,var(--accent) 10%,transparent);border-radius:10px;color:var(--ink)!important}
+.tip{padding:14px;margin-top:12px;border-left:5px solid var(--accent)}.tip h3{margin:2px 0 6px;font-size:15px}.tip p{margin:0;font-size:14px;color:var(--sub)}
+.etag{display:inline-block;font-size:12px;font-weight:700;color:var(--accent);margin-bottom:4px}
+.emore{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--accent);text-decoration:none}
+.eco,.stock{padding:14px}.eco h3{margin:0 0 6px;font-size:15px}.eco p,.stock p{margin:0;font-size:14px;color:var(--sub)}
+.sh{display:flex;align-items:center;gap:8px;margin-bottom:6px}.flag{font-size:20px}.sh b{flex:1;font-size:15px}
+.sh em{font-style:normal;font-weight:800;font-size:14px}.up{color:var(--up)}.down{color:var(--down)}
+.note{font-size:12px;color:var(--sub);margin:10px 2px 0}
+.quote{margin:0;padding:22px 20px;border-radius:18px;background:var(--card);box-shadow:var(--shadow);font-size:18px;font-weight:600;line-height:1.6;border-left:5px solid var(--accent)}
+.quote footer{margin-top:8px;font-size:13px;font-weight:400;color:var(--sub)}
+footer.foot{margin-top:30px;text-align:center;font-size:12px;color:var(--sub)}
+</style><script>(function(){try{if(/KAKAOTALK/i.test(navigator.userAgent)){location.href="kakaotalk://web/openExternal?url="+encodeURIComponent(location.href);}}catch(e){}})();</script></head>
+<body><div class="wrap">
+<header><div class="date">2026.11.9 (월)</div><h1>☕ 오늘의 아침 브리핑</h1></header>
+<section><h2>📅 내 일정</h2><div class="card pad"><ul class="sch"><li><span class="sd">11/14(토) </span><b>14:00</b> 보드게임 신촌</li><li><span class="sd">11/14(토) </span><b>19:00</b> 훈스토랑</li></ul></div></section>
+
+<section class="hero">
+  <div class="hero-text"><p>🌤️ 구름 조금 · 3~11° · 오후 비 가능(51%)</p><p>출근길 체감 2도라 두툼한 겉옷에 접이우산 챙기세요. 월요일 아침엔 따뜻한 커피 한 잔이 제일 큰 복지.</p></div>
+  <div class="chips"><div class="chip"><b>관악구</b> ⛅ 4° / 11° · ☔ 51% · 💨 7m/s</div><div class="chip"><b>서초구</b> ⛅ 3° / 11° · ☔ 51% · 💨 6m/s</div></div>
+  <div class="commute">🚇 출근 4°(체감 2°) · 퇴근 9°(체감 6°)</div>
+  <div class="strip"><div class="day"><span class="dow">월</span><span class="md">11/9</span><span class="ico">⛅</span><span class="t"><b>11°</b> 4°</span><span class="w"><i title="비">☔</i></span></div><div class="day"><span class="dow">화</span><span class="md">11/10</span><span class="ico">🌤️</span><span class="t"><b>10°</b> 1°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">수</span><span class="md">11/11</span><span class="ico">⛅</span><span class="t"><b>14°</b> 4°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">목</span><span class="md">11/12</span><span class="ico">☁️</span><span class="t"><b>15°</b> 6°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">금</span><span class="md">11/13</span><span class="ico">☁️</span><span class="t"><b>15°</b> 7°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">토</span><span class="md">11/14</span><span class="ico">🌦️</span><span class="t"><b>11°</b> 7°</span><span class="w"><i title="비">☔</i></span></div><div class="day"><span class="dow">일</span><span class="md">11/15</span><span class="ico">🌫️</span><span class="t"><b>15°</b> 5°</span><span class="w"><i title="비">☔</i></span></div><div class="day"><span class="dow">월</span><span class="md">11/16</span><span class="ico">☁️</span><span class="t"><b>17°</b> 6°</span><span class="w">&nbsp;</span></div></div>
+  <p class="weekline">오늘 11/9(월) 구름 조금 3~11° · 비 확률 51%, 우산<br>내일 11/10(화) 맑음 1~10° · 아침 쌀쌀<br>모레 11/11(수) 구름 조금~흐림 3~14° · 일교차 큼</p>
+  <div class="weekend"><b>🏕️ 이번 주말은?</b><p>11/14(토) 🌧️ 7~11° 비 83% · 11/15(일) 🌫️ 5~15° 안개·비 88%<br>주말 내내 비 소식이라 야외 대신 전시·영화·카페에서 책 읽기, 실내 운동으로 알차게 보내기 좋은 날씨.</p></div>
+</section>
+<section><h2>📰 업계 뉴스</h2><div class="grid">
+<a class="card news" href="https://view.asiae.co.kr/article/2026110514515540329" rel="noopener noreferrer">
+  <div class="thumb" style="background-image:url('https://cphoto.asiae.co.kr/listimglink/1/2026110618000790344_1793955607.jpg')"></div>
+  <div class="body">
+    <span class="tag" style="--c:#d97706">🥐 경쟁사</span><span class="when">11/7 기사</span>
+    <h3>연말 케이크 대전 개막, 사전예약 일정 공개</h3>
+    <p>뚜레쥬르 11일, 스타벅스 12일 사전예약 시작. 파리바게뜨·배스킨라빈스는 일정 미정. 스타벅스가 조선호텔과 협업하는 등 협업·한정 수량 경쟁이 커져 우리 시즌 기획도 시점 점검 필요.</p>
+    <span class="more">기사 보기 →</span>
+  </div>
+</a>
+<a class="card news" href="https://www.segye.com/newsView/20261105504330" rel="noopener noreferrer">
+  <div class="thumb" style="background-image:url('https://www.segye.com/content/image/2026/11/05/20261105504339.jpg')"></div>
+  <div class="body">
+    <span class="tag" style="--c:#7c3aed">✨ 트렌드</span><span class="when">11/5 기사</span>
+    <h3>카페업계 연말 굿즈·할인 경쟁 본격화</h3>
+    <p>스타벅스는 6~12일 스티커 2배 적립, 파스쿠찌는 케이크 예약 25~40% 할인, 투썸은 가나디 협업 케이크 출시. 캐릭터·굿즈 결합이 연말 선물 수요를 겨냥하는 방식이라 B2B 선물 기획에도 참고할 만함.</p>
+    <span class="more">기사 보기 →</span>
+  </div>
+</a>
+<a class="card news" href="https://www.energy-news.co.kr/news/articleView.html?idxno=229575" rel="noopener noreferrer">
+  <div class="thumb" style="background-image:url('https://cdn.energy-news.co.kr/news/photo/202611/229575_105480_3539.jpg')"></div>
+  <div class="body">
+    <span class="tag" style="--c:#d97706">🥐 경쟁사</span><span class="when">11/6 기사</span>
+    <h3>11월 제과제빵 브랜드평판 1위 성심당</h3>
+    <p>한국기업평판연구소 분석에서 성심당 1위, 뚜레쥬르 2위, 던킨 3위, 파리바게뜨 4위. 성심당 지수는 전월 대비 2.07% 상승. 온라인 화제성 기준이라 실제 매출과는 별개로 참고.</p>
+    <span class="more">기사 보기 →</span>
+  </div>
+</a></div></section>
+<section><h2>🗓️ 이번 주 체크</h2><div class="card pad"><ul class="wk"><li>11/11(수) 빼빼로데이 · 뚜레쥬르 크리스마스 케이크 사전예약 시작</li><li>11/12(목) 스타벅스 크리스마스 홀케이크 사전예약 시작 (조선델리 협업 케이크 12~19일)</li><li>이번 주 중 투썸플레이스 예약 시작 예정, 파리바게뜨·배스킨라빈스 일정 공지 대기</li><li>11/14(토)~15(일) 주말 내내 비 예보</li></ul></div></section>
+<section><h2>🍽️ 오늘 뭐 먹지?</h2><div class="meals"><div class="meal"><span class="ml">🍱 점심</span><b>우동 정식</b><p>월요일은 후루룩 빨리, 비 올 땐 따끈한 국물.</p></div><div class="meal"><span class="ml">🌙 저녁</span><b>김치찜</b><p>월요일 버틴 나에게 주는 보상, 밥 한 공기 순삭.</p></div></div></section>
+
+<section><h2>📈 오늘의 경제</h2><div class="inds"><div class="ind"><span>코스피</span><b>5,059.69</b><em class="down">-6.02%</em></div><div class="ind"><span>코스닥</span><b>644.27</b><em class="down">-5.03%</em></div><div class="ind"><span>나스닥</span><b>24,579.42</b><em class="up">+1.09%</em></div><div class="ind"><span>S&amp;P500</span><b>7,376.86</b><em class="up">+0.31%</em></div><div class="ind"><span>원/달러</span><b>1,356.6원</b><em class="up">+14.5원</em></div><div class="ind"><span>엔화(100엔·참고)</span><b>858.19원</b><em class="up">+1.13%</em></div></div><p class="mnote">🗞️ 미국은 반등했지만 코스피는 금요일 6% 급락했어요. 월요일 출근길, 계좌는 잠시 안 보는 게 정신건강에 좋을지도요.</p><div class="grid"><div class="card eco"><h3>미국 10월 일자리 16.5만 명, 예상 크게 웃돌아</h3><p>10월 미국 일자리가 16만5천 명 늘어 전망치(5만9천 명)의 약 2.8배였다. 실업률은 4.1%로 내려갔다.</p><p class="view">💭 <b>생각해볼 관점</b> 일자리가 튼튼하면 금리 인하는 멀어져요. 환율과 수입 원재료 비용 흐름도 같이 볼 만해요.</p><a class="emore" href="https://www.fnnews.com/news/202611062256534209" rel="noopener noreferrer">근거 기사 →</a></div><div class="card eco"><h3>코스피 6% 급락, 서킷브레이커 발동</h3><p>6일 코스피가 6.02% 내린 5,059.69에 마감했다. 이틀 연속 5% 넘게 빠졌고 외국인 매도가 컸다.</p><p class="view">💭 <b>생각해볼 관점</b> 주가가 출렁일 땐 월급 통장보다 마음이 먼저 흔들려요. 급할 때 쓸 돈과 투자금을 나눠 두는 게 기본이에요.</p><a class="emore" href="https://www.newspim.com/news/view/20261106000997" rel="noopener noreferrer">근거 기사 →</a></div></div><div class="card tip"><span class="etag">💡 오늘의 머니 팁 · 용어</span><h3>기준금리, 돈값의 기본 가격표</h3><p>기준금리는 중앙은행이 정하는 금리의 기준이에요. 이게 오르면 대출이자와 예금이자도 따라 오르는 경향이 있어요. 마트 물가 조절 버튼 같은 역할이라 뉴스에서 자주 나와요.</p><p class="note">※ 참고용 정보이며 특정 상품 추천이 아닙니다. 가입 조건은 공식 안내를 확인하세요.</p></div></section>
+<section><h2>📌 기록해둘 포인트</h2><div class="grid"><div class="card pad"><span class="etag">📌 업계</span><h3>연말 케이크 예약 경쟁, 파바·배라 일정 미정</h3><p class="sm">뚜레쥬르·스타벅스는 예약을 시작했고 파리바게뜨 일정은 미정이다. 이번 주 공개되는 제품과 할인 조건을 체크해두자. <a href="https://view.asiae.co.kr/article/2026110514515540329" rel="noopener noreferrer">근거 →</a></p></div></div><p class="note">이 내용은 <a href="../notes.html">📚 모아보기</a>에 날짜별로 저장돼요.</p></section>
+<section><h2>🔎 오늘 주목받는 종목</h2><div class="grid"><div class="card stock"><div class="sh"><span class="flag">🇰🇷</span><b>SK하이닉스(000660)</b><em class="down">-10.44%</em></div><p>미국 반도체지수 폭락 여파로 6일 113만2천원에 마감. 외국인이 약 1조9천억 원 순매도했다.</p></div><div class="card stock"><div class="sh"><span class="flag">🇺🇸</span><b>마이크론(MU)</b><em class="up">+5.12%</em></div><p>전날 급락 뒤 반등해 690달러 마감. AI·반도체주 저가 매수세와 HBM 수요 기대가 거론됐다.</p></div></div><p class="note">※ 추천이 아닌 참고용 정보입니다. 투자 판단과 책임은 본인에게 있습니다.</p></section>
+<section><h2>✨ 오늘의 한마디</h2><blockquote class="quote">러너스 하이의 주인공이 엔도르핀이라는 건 옛 설명. 최근 연구는 대마초와 닮은 체내 물질 &#x27;엔도카나비노이드&#x27;를 더 유력하게 봐요. 주말 비 오면 실내에서 30분만 뛰며 확인해볼까요?<footer>— BMC Medicine 등 러너스 하이 연구</footer></blockquote></section>
+<footer class="foot"><a href="../notes.html">📚 모아보기</a> · 07:18 생성 · 자동 발행</footer>
+</div></body></html>
