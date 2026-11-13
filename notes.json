@@ -1,6 +1,13 @@
 {
  "tips": [
   {
+   "date": "2026-11-14",
+   "kind": "용어",
+   "title": "달러인덱스, 달러의 종합 성적표",
+   "body": "달러인덱스는 유로·엔 등 주요 통화 대비 달러의 힘을 하나의 숫자로 보여주는 지표예요. 오르면 달러 강세라서 원/달러 환율도 오르는 경우가 많아요. 다만 환율은 국내 요인도 함께 움직여서 늘 같이 가지는 않아요.",
+   "link": ""
+  },
+  {
    "date": "2026-11-13",
    "kind": "절세",
    "title": "의료비 공제, 총급여 3% 넘어야 시작",
@@ -51,6 +58,13 @@
   }
  ],
  "watch": [
+  {
+   "date": "2026-11-14",
+   "kind": "업계",
+   "title": "대한항공 기내식 이원체제 유지",
+   "why": "기존 장기 계약 때문에 통합 후에도 기내식 공급이 둘로 나뉘어요. 앞으로 공급 구조 변화가 있는지 체크해두면 좋아요.",
+   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5uR3gxNTgwcjBOdHpPMkw3dWtBUDN5VmhkUTllTzkxbjdLbGF3eDZtZTlRQ1dEWjA2Z2p0d2RqS0JlWVZKYlhiSnB4UGpibXpicVZQWE9R?oc=5"
+  },
   {
    "date": "2026-11-13",
    "kind": "업계",
