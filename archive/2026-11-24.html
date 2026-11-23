@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>아침 브리핑 11/24</title>
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<meta name="theme-color" content="#f43f5e"><style>
+:root{--bg:#f6f4f1;--card:#fff;--ink:#1f2328;--sub:#5b6470;--line:#e7e2db;--accent:#c2410c;
+--hero1:#fde7d3;--hero2:#fff4e8;--up:#d92d20;--down:#2563eb;--shadow:0 1px 3px rgba(0,0,0,.06),0 6px 18px rgba(0,0,0,.05)}
+@media (prefers-color-scheme:dark){:root{--bg:#14110f;--card:#1f1b18;--ink:#f1ece6;--sub:#b3aba2;--line:#332d28;
+--accent:#fb923c;--hero1:#3a2417;--hero2:#2a1d14;--up:#f87171;--down:#60a5fa;--shadow:none}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.55}
+.wrap{max-width:760px;margin:0 auto;padding:16px 16px 48px}
+header{padding:8px 2px 14px}header .date{color:var(--sub);font-size:13px}
+header h1{margin:2px 0 0;font-size:22px;letter-spacing:-.02em}
+h2{font-size:16px;margin:26px 2px 10px}
+.hero{background:linear-gradient(135deg,var(--hero1),var(--hero2));border-radius:20px;padding:18px;box-shadow:var(--shadow)}
+.hero-text p{margin:0 0 4px;font-size:17px;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+.chip{background:var(--card);border-radius:999px;padding:6px 12px;font-size:13px;box-shadow:var(--shadow)}
+.commute{font-size:13px;color:var(--sub);margin-top:6px}
+.strip{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;margin-top:14px;overflow-x:auto}
+.day{background:var(--card);border-radius:12px;padding:8px 2px;text-align:center;min-width:44px;display:flex;flex-direction:column;gap:2px}
+.day .dow{font-size:12px;color:var(--sub)}.day .md{font-size:11px;color:var(--sub)}.day .ico{font-size:20px}.day .t{font-size:12px}.day .t b{font-size:13px}
+.day .w{font-size:11px;min-height:16px}.day i{font-style:normal}
+.weekend{background:var(--card);border-radius:14px;padding:12px 14px;margin-top:12px;box-shadow:var(--shadow)}.weekend b{font-size:14px}.weekend p{margin:4px 0 0;font-size:14px}
+.weekline{font-size:13px;color:var(--sub);margin:12px 0 0}
+.grid{display:grid;gap:12px}@media(min-width:620px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:var(--card);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;color:inherit;text-decoration:none;display:block}
+.news .thumb{height:150px;background:#ddd center/cover no-repeat}
+.news .thumb.ph{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--c),#0003);font-size:44px}
+.news .body{padding:14px}
+.tag{display:inline-block;font-size:12px;font-weight:700;color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent);padding:2px 9px;border-radius:999px}
+.when{font-size:12px;color:var(--sub);margin-left:8px}
+.news h3{font-size:16px;margin:8px 0 6px;line-height:1.35}.news p{margin:0;font-size:14px;color:var(--sub)}
+.more{display:inline-block;margin-top:10px;font-size:13px;color:var(--accent);font-weight:700}
+.inds{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}@media(min-width:620px){.inds{grid-template-columns:repeat(3,1fr)}}
+.ind{background:var(--card);border-radius:14px;box-shadow:var(--shadow);padding:10px 12px;display:flex;flex-direction:column}
+.ind span{font-size:12px;color:var(--sub)}.ind b{font-size:16px}.ind em{font-style:normal;font-size:13px;font-weight:700}
+.mnote{font-size:14px;color:var(--sub);margin:10px 2px 12px}
+.pad{padding:14px}.pad h3{margin:2px 0 6px;font-size:15px}.sm{margin:0;font-size:14px;color:var(--sub)}.pad a,.note a{color:var(--accent);font-weight:700;text-decoration:none}
+.meals{display:grid;grid-template-columns:1fr 1fr;gap:10px}.meal{background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:12px 14px}
+.meal .ml{font-size:12px;color:var(--sub);display:block}.meal b{font-size:16px}.meal p{margin:4px 0 0;font-size:13px;color:var(--sub)}
+.sch{list-style:none;margin:0;padding:0;font-size:15px}.sch li{padding:5px 0;border-bottom:1px solid var(--line)}.sch li:last-child{border:0}.sd{display:inline-block;min-width:58px;color:var(--sub);font-size:13px}
+.wk{margin:0;padding-left:18px;font-size:14px}.wk li{margin:3px 0}
+.view{margin:8px 0 0!important;padding:8px 10px;background:color-mix(in srgb,var(--accent) 10%,transparent);border-radius:10px;color:var(--ink)!important}
+.tip{padding:14px;margin-top:12px;border-left:5px solid var(--accent)}.tip h3{margin:2px 0 6px;font-size:15px}.tip p{margin:0;font-size:14px;color:var(--sub)}
+.etag{display:inline-block;font-size:12px;font-weight:700;color:var(--accent);margin-bottom:4px}
+.emore{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--accent);text-decoration:none}
+.eco,.stock{padding:14px}.eco h3{margin:0 0 6px;font-size:15px}.eco p,.stock p{margin:0;font-size:14px;color:var(--sub)}
+.sh{display:flex;align-items:center;gap:8px;margin-bottom:6px}.flag{font-size:20px}.sh b{flex:1;font-size:15px}
+.sh em{font-style:normal;font-weight:800;font-size:14px}.up{color:var(--up)}.down{color:var(--down)}
+.note{font-size:12px;color:var(--sub);margin:10px 2px 0}
+.quote{margin:0;padding:22px 20px;border-radius:18px;background:var(--card);box-shadow:var(--shadow);font-size:18px;font-weight:600;line-height:1.6;border-left:5px solid var(--accent)}
+.quote footer{margin-top:8px;font-size:13px;font-weight:400;color:var(--sub)}
+footer.foot{margin-top:30px;text-align:center;font-size:12px;color:var(--sub)}
+</style><script>(function(){try{if(/KAKAOTALK/i.test(navigator.userAgent)){location.href="kakaotalk://web/openExternal?url="+encodeURIComponent(location.href);}}catch(e){}})();</script></head>
+<body><div class="wrap">
+<header><div class="date">2026.11.24 (화)</div><h1>☕ 오늘의 아침 브리핑</h1></header>
+
+
+<section class="hero">
+  <div class="hero-text"><p>🥶 구름 조금 · -3~5° · 돌풍 13m/s</p><p>체감 -6°라 목도리·장갑 필수. 찬바람에 볼이 먼저 겨울이 되는 날.</p></div>
+  <div class="chips"><div class="chip"><b>관악구</b> ⛅ -3° / 5° · ☔ 0% · 💨 13m/s</div><div class="chip"><b>서초구</b> ⛅ -3° / 5° · ☔ 0% · 💨 13m/s</div></div>
+  <div class="commute">🚇 출근 -1°(체감 -5°) · 퇴근 -1°(체감 -6°)</div>
+  <div class="strip"><div class="day"><span class="dow">화</span><span class="md">11/24</span><span class="ico">⛅</span><span class="t"><b>5°</b> -3°</span><span class="w"><i title="영하">🥶</i></span></div><div class="day"><span class="dow">수</span><span class="md">11/25</span><span class="ico">☁️</span><span class="t"><b>6°</b> -4°</span><span class="w"><i title="영하">🥶</i></span></div><div class="day"><span class="dow">목</span><span class="md">11/26</span><span class="ico">⛅</span><span class="t"><b>14°</b> 6°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">금</span><span class="md">11/27</span><span class="ico">🌦️</span><span class="t"><b>14°</b> 7°</span><span class="w"><i title="비">☔</i></span></div><div class="day"><span class="dow">토</span><span class="md">11/28</span><span class="ico">☁️</span><span class="t"><b>8°</b> 1°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">일</span><span class="md">11/29</span><span class="ico">☁️</span><span class="t"><b>8°</b> -2°</span><span class="w"><i title="영하">🥶</i></span></div><div class="day"><span class="dow">월</span><span class="md">11/30</span><span class="ico">⛅</span><span class="t"><b>13°</b> 6°</span><span class="w">&nbsp;</span></div><div class="day"><span class="dow">화</span><span class="md">12/1</span><span class="ico">🌦️</span><span class="t"><b>16°</b> 6°</span><span class="w">&nbsp;</span></div></div>
+  <p class="weekline">오늘 11/24(화): 구름 조금, -3~5°, 영하 출근길·돌풍 주의<br>내일 11/25(수): 흐림, -5~6°, 아침 가장 추움·일교차 큼<br>모레 11/26(목): 구름 조금, 5~14°, 기온 껑충 올라 포근</p>
+  <div class="weekend"><b>🏕️ 이번 주말은?</b><p>11/28(토) ☁️ 1~8° · 11/29(일) ☁️ -2~8° 흐리고 쌀쌀<br>강수는 거의 없지만 추운 주말. 온천·찜질방에서 몸 녹이기나 겨울 바다 드라이브 어때요?</p></div>
+</section>
+<section><h2>📰 업계 뉴스</h2><div class="grid">
+<a class="card news" href="https://www.wikitree.co.kr/articles/1176263" rel="noopener noreferrer">
+  <div class="thumb" style="background-image:url('https://cdnweb01.wikitree.co.kr/webdata/editor/202611/20/img_20261120115524_01b0d950.jpg')"></div>
+  <div class="body">
+    <span class="tag" style="--c:#d97706">🥐 경쟁사</span><span class="when">11/20 기사</span>
+    <h3>성심당, 3,700원 &#x27;홍시데니쉬&#x27; 신제품 판매 시작</h3>
+    <p>성심당 본점이 마스카포네 크림에 캐러멜화한 홍시를 올린 과일 데니쉬를 17일부터 판매 중. 제철 과일 한 알을 통째로 올린 &#x27;비주얼 단품&#x27;이 가격 3,700원대에서 통한다는 신호.</p>
+    <span class="more">기사 보기 →</span>
+  </div>
+</a>
+<a class="card news" href="https://www.fnnews.com/news/202611231810523102" rel="noopener noreferrer">
+  <div class="thumb" style="background-image:url('https://image.fnnews.com/resource/media/image/2026/11/23/202611231810516337_l.jpg')"></div>
+  <div class="body">
+    <span class="tag" style="--c:#2563eb">📊 시장</span><span class="when">11/23 기사</span>
+    <h3>풀무원푸드앤컬처, 미국 LG엔솔 사업장서 첫 해외 급식</h3>
+    <p>풀무원푸드앤컬처가 애리조나 LG에너지솔루션 사업장에서 갈비찜·김밥 등 K급식을 시작. 아워홈·삼성웰스토리도 북미 경쟁 중이라 단체급식 B2B의 해외 확장 흐름을 볼 만함.</p>
+    <span class="more">기사 보기 →</span>
+  </div>
+</a>
+<a class="card news" href="https://www.asiatime.co.kr/article/20261119500164" rel="noopener noreferrer">
+  <div class="thumb" style="background-image:url('https://csossihettpx2597658.cdn.gov-ntruss.com/data2/content/image/2026/11/19/.cache/512/20261119500159.jpg')"></div>
+  <div class="body">
+    <span class="tag" style="--c:#7c3aed">✨ 트렌드</span><span class="when">11/19 기사</span>
+    <h3>카페업계 겨울 성수기 공략, 빽다방 딥크림라떼 2주 20만 잔</h3>
+    <p>빽다방 딥크림라떼가 출시 2주 만에 20만 잔 판매. 폴 바셋 설향 딸기 8종, 공차 해리포터 협업 등 시즌·협업 상품이 연말 수요를 가르는 중이라 B2B 시즌 기획에도 참고할 만함.</p>
+    <span class="more">기사 보기 →</span>
+  </div>
+</a></div></section>
+
+<section><h2>🍽️ 오늘 뭐 먹지?</h2><div class="meals"><div class="meal"><span class="ml">🍱 점심</span><b>설렁탕</b><p>영하 출근길을 녹여줄 뽀얀 국물, 후루룩 20분 컷.</p></div><div class="meal"><span class="ml">🌙 저녁</span><b>굴보쌈</b><p>제철 굴에 수육 한 점, 추운 하루 버틴 나를 위한 보상.</p></div></div></section>
+
+<section><h2>📈 오늘의 경제</h2><div class="inds"><div class="ind"><span>코스피</span><b>4,708.54</b><em class="down">-3.31%</em></div><div class="ind"><span>나스닥</span><b>24,089.56</b><em class="up">+6.51%</em></div><div class="ind"><span>S&amp;P500</span><b>7,237.17</b><em class="up">+4.73%</em></div><div class="ind"><span>원/달러 환율</span><b>1,345.9원</b><em class="up">+9.7원</em></div><div class="ind"><span>엔화(100엔·참고)</span><b>847.95원</b><em class="up">+0.43%</em></div></div><p class="mnote">🗞️ 코스피는 월요병이 심했고 미국은 엔비디아 효과로 폭풍 반등. 오늘 출근길 시장은 롤러코스터예요.</p><div class="grid"><div class="card eco"><h3>코스피 3.31% 급락, 종가 기준 10개월 만에 최저</h3><p>23일 코스피가 4,708.54로 마감했다. AI·반도체주 약세 여파로 삼성전자는 3.06% 내렸다.</p><p class="view">💭 <b>생각해볼 관점</b> 주가가 출렁이면 소비 심리도 흔들리니 연말 선물·케이크 수요 분위기를 함께 지켜보자.</p><a class="emore" href="https://en.sedaily.com/market/2026/11/23/kospi-closes-down-331-percent-at-470854" rel="noopener noreferrer">근거 기사 →</a></div><div class="card eco"><h3>뉴욕증시 급반등, 나스닥 6.51% 상승</h3><p>엔비디아가 젠슨 황 CEO 복귀 소식에 약 31% 뛰며 나스닥이 6.51% 올랐다. 4월 이후 최고 상승폭이다.</p><p class="view">💭 <b>생각해볼 관점</b> 하루 만에 이렇게 크게 오르내리는 장이라, 오늘 한국 시장 반응이 어떨지부터 체크해보자.</p><a class="emore" href="https://www.cnbc.com/2026/11/22/stock-market-today-live-updates.html" rel="noopener noreferrer">근거 기사 →</a></div></div><div class="card tip"><span class="etag">💡 오늘의 머니 팁 · 용어</span><h3>공모가, 주식 데뷔 첫 가격표</h3><p>기업이 증시에 처음 상장할 때 투자자에게 파는 주당 가격이에요. 상장 후 주가는 수요에 따라 공모가보다 오르기도, 내리기도 해요. 신입사원 첫 연봉 협상가 같은 출발점일 뿐 이후 몸값은 시장이 정해요.</p><p class="note">※ 참고용 정보이며 특정 상품 추천이 아닙니다. 가입 조건은 공식 안내를 확인하세요.</p></div></section>
+<section><h2>📌 기록해둘 포인트</h2><div class="grid"><div class="card pad"><span class="etag">📌 경제</span><h3>원/달러 1,345.9원, 한때 1,350원 돌파 시도</h3><p class="sm">환율이 오르면 수입 원재료 값이 부담된다. 1,350원 선에서 환율이 어디로 가는지 앞으로 체크해둘 만함. <a href="https://en.sedaily.com/economy/2026/11/23/won-tops-1350-per-dollar-intraday-as-risk-aversion-spreads" rel="noopener noreferrer">근거 →</a></p></div></div><p class="note">이 내용은 <a href="../notes.html">📚 모아보기</a>에 날짜별로 저장돼요.</p></section>
+<section><h2>🔎 오늘 주목받는 종목</h2><div class="grid"><div class="card stock"><div class="sh"><span class="flag">🇰🇷</span><b>SK텔레콤(017670)</b><em class="down">-7.32%</em></div><p>23일 종가 64,600원. 보유 지분이 있는 미국 AI 스타트업 앤트로픽의 나스닥 상장과 맞물려 주가가 크게 하락.</p></div><div class="card stock"><div class="sh"><span class="flag">🇺🇸</span><b>엔비디아(NVDA)</b><em class="up">+31.48%</em></div><p>23일 이사회가 젠슨 황의 CEO 복귀를 발표하자 주가가 165.05달러로 급등.</p></div></div><p class="note">※ 추천이 아닌 참고용 정보입니다. 투자 판단과 책임은 본인에게 있습니다.</p></section>
+<section><h2>✨ 오늘의 한마디</h2><blockquote class="quote">오늘의 자전거 운세: 영하 출근길에 안장 위 서리를 보고 지하철을 택한 당신, 오늘 가장 현명한 결정을 이미 내렸습니다. 자전거는 봄까지 안 도망가요.</blockquote></section>
+<footer class="foot"><a href="../notes.html">📚 모아보기</a> · 07:32 생성 · 자동 발행</footer>
+</div></body></html>
